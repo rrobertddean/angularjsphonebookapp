@@ -1,0 +1,26 @@
+<table class="table"> 
+  <tr>
+    <th>#</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Contact Number</th>
+    <th>Address</th>
+    <th><a>Edit</a></th>
+    <th><a>Delete</a></th>
+  </tr>
+
+  <tbody>
+    <tr *ngFor="let cont of service.list">
+      <td>{{cont.id}}</td>
+      <td>{{cont.firstname}}</td>
+      <td>{{cont.lastname}}</td>
+      <td>{{cont.contactnumber}}</td>
+      <td>{{cont.address}}</td>
+      <td><a (click)="populateform(cont)"><i class="fa fa-edit"></i></a></td>
+      <td><a (click)="onDelete(cont.id)"><i class="fa fa-trash"></i></a></td>
+    </tr>
+    
+
+  </tbody>
+
+</table>
